@@ -21,16 +21,16 @@ ModuleVersion = '0.1.2'
 GUID = '94b2c746-72a9-4f98-bc16-ebb394c36635'
 
 # Author of this module
-Author = 'thiag'
+Author = 'thiago'
 
 # Company or vendor of this module
 CompanyName = 'Unknown'
 
 # Copyright statement for this module
-Copyright = '(c) thiag. All rights reserved.'
+Copyright = '(c) thiago. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+ Description = 'DemoModule1'
 
 # Minimum version of the PowerShell engine required by this module
 # PowerShellVersion = ''
