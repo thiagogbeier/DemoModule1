@@ -1,14 +1,30 @@
-name: Publish
-on: [workflow_dispatch]
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-    build:
-      name: Publish
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v1
-        - name: Publish
-          env:
-            APIKEY: ${{ secrets.POWERSHELL_GALLERY_API_KEY }}
-          run: .\build_scripts\build.ps1
-          shell: pwsh
+  publish-to-gallery:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and publish
+        shell: pwsh
+        env:
+          DEMOMODULEPSG: ${{ secrets.POWERSHELL_GALLERY_API_KE }}
+          BUILDVER: "0.1.0"
+        run: |
+          ./build_scripts/build.ps1
+          if (Test-Path ../DemoModule) {
+            Write-Host "Building and publishing module..."
+            Publish-Module -Path ../DemoModule -Repository PSGallery -NuGetApiKey $env:DEMOMODULEPSG -Verbose
+          } else {
+            Write-Error "DemoModule folder not found."
+            exit 1
+          }
