@@ -13,9 +13,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup PowerShell
-        uses: powershell/setup-powershell@v2  # Correct action name and version
-
       - name: Set build version from tag
         id: vars
         run: |
