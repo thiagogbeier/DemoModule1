@@ -20,7 +20,7 @@ jobs:
           ./build_scripts/build.ps1
           if (Test-Path ../DemoModule1) {
             Write-Host "Building and publishing module..."
-            Publish-Module -Path ../DemoModule1 -Repository PSGallery -NuGetApiKey ${{ secrets.POWERSHELL_GALLERY_API_KE }} -Verbose
+            Publish-Module -Path ../DemoModule1 -Repository PSGallery -NuGetApiKey ${{ secrets.POWERSHELL_GALLERY_API_KEY }} -Verbose
           } else {
             Write-Error "DemoModule1 folder not found."
             exit 1
