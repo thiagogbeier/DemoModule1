@@ -12,25 +12,25 @@
 RootModule = 'DemoModule1.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.1'
+ModuleVersion = '0.1.2'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
 
 # ID used to uniquely identify this module
-GUID = '3101ff2a-6ce5-4af1-8615-fe68cb85d5f6'
+GUID = '2b5183e9-e189-4a98-bc1f-8a36b808fcf8'
 
 # Author of this module
-Author = 'thiago'
+Author = 'thiag'
 
 # Company or vendor of this module
 CompanyName = 'Unknown'
 
 # Copyright statement for this module
-Copyright = '(c) thiago. All rights reserved.'
+Copyright = '(c) thiag. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'DemoModule1 is a demo module for PowerShell module development.'
+# Description = ''
 
 # Minimum version of the PowerShell engine required by this module
 # PowerShellVersion = ''
